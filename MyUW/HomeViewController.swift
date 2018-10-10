@@ -13,6 +13,6 @@ import WebKit
 class HomeViewController: ApplicationController {
     
     override var url: Foundation.URL {
-        return Foundation.URL(string: "http://curry.aca.uw.edu:8000/?hybrid=true")!
+        return Foundation.URL(string: "http://curry.aca.uw.edu:8000/")!
     }
 }

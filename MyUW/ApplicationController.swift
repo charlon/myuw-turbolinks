@@ -5,7 +5,7 @@ import Turbolinks
 class ApplicationController: UINavigationController {
     
     var url: Foundation.URL {
-        return Foundation.URL(string: "http://localhost:8000/?hybrid=true")!
+        return Foundation.URL(string: "http://localhost:8000/")!
     }
     
     fileprivate let webViewProcessPool = WKProcessPool()
@@ -37,8 +37,14 @@ class ApplicationController: UINavigationController {
     }
 
     fileprivate func presentVisitableForSession(_ session: Session, url: URL, action: Action = .Advance) {
+        
+        // before a visit is made... always include hybrid params
+        let url = Foundation.URL(string: "\(url)?hybrid=true")!
+        print("the url to visit is \(url)")
+        
+        // make the turbolinks visit request
         let visitable = VisitableViewController(url: url)
-
+        
         if action == .Advance {
             pushViewController(visitable, animated: true)
         } else if action == .Replace {
