@@ -58,14 +58,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         eighthTabNavigationControoller.tabBarItem = item8
         
         // Tabbaar setup
-        UITabBar.appearance().tintColor = hexStringToUIColor("#514DA3")
+        UITabBar.appearance().tintColor = hexStringToUIColor("#4b2e83")
         
         self.window?.rootViewController = tabBarController
         
         // navbar setup
-        UINavigationBar.appearance().barTintColor = hexStringToUIColor("#514DA3")
+        UINavigationBar.appearance().barTintColor = hexStringToUIColor("#4b2e83")
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().tintColor = hexStringToUIColor("#ffffff")
+        UINavigationBar.appearance().barStyle = .blackOpaque // statusbar icons and text color (theme)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : hexStringToUIColor("#ffffff")]
         
         // globally set tint color
