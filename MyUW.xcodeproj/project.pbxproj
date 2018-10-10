@@ -14,6 +14,7 @@
 		85A13B1C216D92D300993C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A13B1A216D92D300993C3C /* LaunchScreen.storyboard */; };
 		85A13B27216D92D300993C3C /* MyUWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B26216D92D300993C3C /* MyUWTests.swift */; };
 		85A13B32216D92D300993C3C /* MyUWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B31216D92D300993C3C /* MyUWUITests.swift */; };
+		85A13B41216D947100993C3C /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A13B40216D947000993C3C /* Turbolinks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		85A13B2D216D92D300993C3C /* MyUWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyUWUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A13B31216D92D300993C3C /* MyUWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUWUITests.swift; sourceTree = "<group>"; };
 		85A13B33216D92D300993C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85A13B40216D947000993C3C /* Turbolinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Turbolinks.framework; path = Carthage/Build/iOS/Turbolinks.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A13B41216D947100993C3C /* Turbolinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				85A13B25216D92D300993C3C /* MyUWTests */,
 				85A13B30216D92D300993C3C /* MyUWUITests */,
 				85A13B0F216D92D100993C3C /* Products */,
+				85A13B3F216D947000993C3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				85A13B33216D92D300993C3C /* Info.plist */,
 			);
 			path = MyUWUITests;
+			sourceTree = "<group>";
+		};
+		85A13B3F216D947000993C3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85A13B40216D947000993C3C /* Turbolinks.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +446,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC6929M8ED;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyUW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charlon.MyUW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,6 +468,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC6929M8ED;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MyUW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.charlon.MyUW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
