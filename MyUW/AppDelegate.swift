@@ -8,6 +8,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var firstTabNavigationController : UINavigationController!
     var secondTabNavigationControoller : UINavigationController!
+    var thirdTabNavigationController : UINavigationController!
+    var fourthTabNavigationControoller : UINavigationController!
+    var fifthTabNavigationController : UINavigationController!
+    var sixthTabNavigationControoller : UINavigationController!
+    var seventhTabNavigationController : UINavigationController!
+    var eighthTabNavigationControoller : UINavigationController!
     
     // MARK: UIApplicationDelegate
 
@@ -20,14 +26,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         firstTabNavigationController = HomeViewController()
         secondTabNavigationControoller = AccountsViewController()
+        thirdTabNavigationController = HomeViewController()
+        fourthTabNavigationControoller = AccountsViewController()
+        fifthTabNavigationController = HomeViewController()
+        sixthTabNavigationControoller = AccountsViewController()
+        seventhTabNavigationController = HomeViewController()
+        eighthTabNavigationControoller = AccountsViewController()
         
-        tabBarController.viewControllers = [firstTabNavigationController, secondTabNavigationControoller]
+        tabBarController.viewControllers = [firstTabNavigationController, secondTabNavigationControoller, thirdTabNavigationController,
+        fourthTabNavigationControoller, fifthTabNavigationController, sixthTabNavigationControoller, seventhTabNavigationController,
+        eighthTabNavigationControoller]
+        
+        tabBarController.selectedIndex = 0
         
         let item1 = UITabBarItem(title: "Home", image: UIImage(named: "ico-home"), tag: 0)
         let item2 = UITabBarItem(title: "Accounts", image:  UIImage(named: "ico-contest"), tag: 1)
+        let item3 = UITabBarItem(title: "Teaching", image:  UIImage(named: "ico-contest"), tag: 2)
+        let item4 = UITabBarItem(title: "Profile", image:  UIImage(named: "ico-contest"), tag: 3)
+        let item5 = UITabBarItem(title: "Calendar", image:  UIImage(named: "ico-contest"), tag: 4)
+        let item6 = UITabBarItem(title: "Resources", image:  UIImage(named: "ico-contest"), tag: 5)
+        let item7 = UITabBarItem(title: "Staff", image:  UIImage(named: "ico-contest"), tag: 6)
+        let item8 = UITabBarItem(title: "Academics", image:  UIImage(named: "ico-contest"), tag: 7)
         
         firstTabNavigationController.tabBarItem = item1
         secondTabNavigationControoller.tabBarItem = item2
+        thirdTabNavigationController.tabBarItem = item3
+        fourthTabNavigationControoller.tabBarItem = item4
+        fifthTabNavigationController.tabBarItem = item5
+        sixthTabNavigationControoller.tabBarItem = item6
+        seventhTabNavigationController.tabBarItem = item7
+        eighthTabNavigationControoller.tabBarItem = item8
         
         // Tabbaar setup
         UITabBar.appearance().tintColor = hexStringToUIColor("#514DA3")
