@@ -11,7 +11,6 @@
 		85A13B1C216D92D300993C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85A13B1A216D92D300993C3C /* LaunchScreen.storyboard */; };
 		85A13B27216D92D300993C3C /* MyUWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B26216D92D300993C3C /* MyUWTests.swift */; };
 		85A13B32216D92D300993C3C /* MyUWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B31216D92D300993C3C /* MyUWUITests.swift */; };
-		85A13B41216D947100993C3C /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A13B40216D947000993C3C /* Turbolinks.framework */; };
 		85A13B49216D9A4000993C3C /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B42216D9A4000993C3C /* AuthenticationController.swift */; };
 		85A13B4A216D9A4000993C3C /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85A13B43216D9A4000993C3C /* ErrorView.xib */; };
 		85A13B4B216D9A4000993C3C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B44216D9A4000993C3C /* ErrorView.swift */; };
@@ -20,6 +19,8 @@
 		85A13B4F216D9A4000993C3C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B48216D9A4000993C3C /* Error.swift */; };
 		85A13B53216D9CE000993C3C /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B52216D9CE000993C3C /* AccountsViewController.swift */; };
 		85A13B55216D9E0300993C3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A13B54216D9E0200993C3C /* AppDelegate.swift */; };
+		85B4C2F8216F0A1A0084810D /* Turbolinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A13B40216D947000993C3C /* Turbolinks.framework */; };
+		85B4C2F9216F0A1A0084810D /* Turbolinks.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85A13B40216D947000993C3C /* Turbolinks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,20 @@
 			remoteInfo = MyUW;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85B4C2FA216F0A1A0084810D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85B4C2F9216F0A1A0084810D /* Turbolinks.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		85A13B0E216D92D100993C3C /* MyUW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUW.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85A13B41216D947100993C3C /* Turbolinks.framework in Frameworks */,
+				85B4C2F8216F0A1A0084810D /* Turbolinks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +178,7 @@
 				85A13B0B216D92D100993C3C /* Frameworks */,
 				85A13B0C216D92D100993C3C /* Resources */,
 				85A13B56216D9EAA00993C3C /* ShellScript */,
+				85B4C2FA216F0A1A0084810D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
