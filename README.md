@@ -1,2 +1,2 @@
-# myuw-ios
+# myuw-turbolinks
 myuw ios turbolinks
